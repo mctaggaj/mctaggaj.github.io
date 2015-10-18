@@ -1,0 +1,23 @@
+<div class="jumbotron">
+<h1>LESS Variables</h1>
+<p>In the current environment of web development developers need to be ready to change and adapt more frequently than ever before. Not only do we need to be ready to adopt new technologies, we also need to continuously restyle our sites to match the latest trends, this essential ability will give our clients an edge over their competitors. Therefor it is imperative that we are able to easily modify your CSS in a stable manor; this is where one of LESS’s key features comes into play. Variables, something that is so basic to every developer, has some how has managed not to make it’s way into CSS. In LESS variables are treated more like constants and parameters than true variables. You can’t modify their value the same way you could in a traditional programming language, but never the less they are a game changer in the web dev industry. LESS variables can hold just about anything you would want to put in them. Take a colour for example. </p>
+<p>
+<code>@red: red;</code>
+or 
+<code>@red : #F00;</code>
+</p>
+
+<p>Both of these are valid. LESS variable always start with an “@“ followed by your variable name, a string with no whitespace characters. In a separate section of your LESS code you can use the variable.</p>
+<p>
+<code>.error {
+    &nbsp;&nbsp;&nbsp;&nbsp;color: @red;
+}</code>
+</p>
+<p>Now lets consider a scenario where a new sweeping trend where red is no longer appealing. Your client may request that their site follow this trend, normally what you would need to is hunt down every single place in your CSS where you set the colour to red. Depending on the design of your CSS this could be a time consuming task. You could do a find and replace but this may not find all the occurrences and you may even break some of your CSS if your find and replace picks something up that you did not expect it to. In LESS this is a completely different story all you would need to do, assuming you used your @red variable everywhere you set the colour to red is change the value assigned to @red.</p>
+
+<p>
+    <code>@red: orange;</code>
+</p>
+
+<p>Once completed, one line of code has changed and everything that was red is now orange. This is a limited scenario but when you begin to account for everything you can assign to a LESS variable the possibilities are endless. Border radius, border width, backgrounds, transitions, animations, class names, and many more can all be controlled with LESS variable. If you only use one feature from LESS this should be it. LESS variables will help you become a more efficient and effective developer. </p>
+</div>
