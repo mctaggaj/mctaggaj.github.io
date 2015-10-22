@@ -1,9 +1,6 @@
-<div class="jumbotron">
 <h1>LESS Mixins</h1>
 <p>In a previous post I covered LESS variables, a quick and easy way to begin utilizing LESS. Please note that for this post I will assume you have a basic understanding of LESS variables; so if you do not please take the time to read the post. </p>
-
 <p>Mixins are a way to insert a predefined piece of functionality anywhere in your LESS. They are a lot like traditional functions with a few key differences. The most important difference is that they do not have return values. When you call a mixin the only result is a predefined chunk of code is inserted into your code. Defining a mixin is extremely simple, it’s the exact same way you define a class. </p>
-
 <p>
     <code>
     .roundCorners {</br>
@@ -13,9 +10,7 @@
     }
     </code>
 </p>
-
 <p>Not only is the above code a mixin, it is also a class. You can use 'class=“roundCorners”' in your HTLM and the border radius would be set to 4px. This is known as an immediately invoked mixin. So far we have not gained any functionality, plain CSS do the same thing by default. Where we gain functionality if by invoking the mixin elsewhere in your code. To invoke your mixing you simply insert a period followed by the mixin name then parentheses.</p>
-
 <p>
     <code>
     .text {</br>
@@ -23,9 +18,7 @@
     }</br>
     </code>
 </p>
-
 <p>This will compile down into CSS that looks like the following</p>
-
 <p>
     <code>
     .roundCorners {</br>
@@ -35,7 +28,6 @@
     }
 </code>
 </p>
-
 <p>
     <code>
     .text {</br>
@@ -45,9 +37,7 @@
     }
     </code>
 </p>
-
 <p>If you do not want your mixin to be immediately invoked all you will need to do is add parentheses after the class name.</p>
-
 <p>
     <code>
     .roundCorners() {</br>
@@ -57,40 +47,31 @@
     }
     </code>
 </p>
-
 <p>If the mixin is not immediately invoked you can’t use 'class=“roundCorners”’ in your html, but you decrease the repetitiveness of you CSS. LESS also allows you to define parameters for your mixins. </p>
-
 <p>
     <code>
-.roundCorners(@size) {</br>
+    .roundCorners(@size) {</br>
         &nbsp;&nbsp;&nbsp;&nbsp;-moz-border-radius: @size;</br>
         &nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-radius: @size;</br>
         &nbsp;&nbsp;&nbsp;&nbsp;border-radius: @size;</br>
- }
+    }
     </code>
 </p>
-
 <p>Now when you call the roundCorners mixin you will need to pass it a parameter. You have two choices when passing a parameter, 1 you can pass the parameters separated by commas in the order they are listed by the mixin definition.</p>
-
 <p>
     <code>
-.text {</br>
+    .text {</br>
         &nbsp;&nbsp;&nbsp;&nbsp;.roundCorners(4px);</br>
-}
+    }
     </code>
 </p>
-
 <p>The second choice is by providing the name of the property followed by a colon then the value. This is also a comma separated list however, order does not matter. </p>
-
 <p>
     <code>
-.text {</br>
+    .text {</br>
         &nbsp;&nbsp;&nbsp;&nbsp;.roundCorners(@size:4px);</br>
-}
+    }
     </code>
 </p>
-
 <p>Calling the mixin with the parameter names promotes readability and if the variable names are generated using a consistent and predictable naming pattern you will not need to check the definition as you would need to if you are passing them in order. It’s like passing an object literal into a java script function instead of a potentially long sting of arguments.</p>
-
 <p>The advantages of mixins are clear, they decrease the repetitiveness of your code and allow you to make sweeping changes across your application easily. There is much more to mixins, you can assign default values to them, you can add conditions to them, and much more. But first, I encourage you to practice with basic mixins lean what you like about them and what you dislike.</p>
-</div>

@@ -1,24 +1,22 @@
-<div class="jumbotron">
 <h1>LESS Nesting</h1>
 <p>Nesting, one of LESS’s tentpole features, it allows developers to more easily organize they code in a much more logical way. Traditional CSS is very repetitive and related code is easily separated. Take the following for example:</p>
 <p>
-<code>.messageBox {</br>
+    <code>
+    .messageBox {</br>
     &nbsp;&nbsp;&nbsp;&nbsp;background: red;</br>
-}</br>
-.messageBox .error {</br>
+    }</br>
+    .messageBox .error {</br>
     &nbsp;&nbsp;&nbsp;&nbsp;color: white;</br>
-}</code>
-    </p>
-
+    }</code>
+</p>
 <p>In this limited case you can se how we needed to write the “.messageBox” selector twice. On top of that if you are not paying attention when you edit your CSS you could easily separate them, reducing the readability of your code. LESS tackles both of these problems at once with nesting. Nesting reduces the amount of repetition while prompting a logical grouping of your code by allowing you to, you guessed it nest your classes. Below I have converted our previous CSS into nested LESS.</p>
 <p>
-<code>.messageBox {</br>
+    <code>
+    .messageBox {</br>
     &nbsp;&nbsp;&nbsp;&nbsp;background:red;</br>
     &nbsp;&nbsp;&nbsp;&nbsp;.error {</br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: white;</br>
     &nbsp;&nbsp;&nbsp;&nbsp;}</br>
-}</code>
+    }</code>
 </p>
-
 <p>The above LESS will compile into CSS that looks exactly like the first example, however it has obvious timesaving and organization implications. There is no limit on how many levels of nesting you can have, however unnecessary nesting is discouraged just as excessive CSS selectors is discouraged. Please take the time to try out nesting for yourself, I guarantee once you use it you will never want to stop.</p>
-</div>
