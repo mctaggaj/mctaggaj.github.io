@@ -17,7 +17,8 @@ angular.module("app", ["ngRoute"]).config(['$routeProvider',
                 templateUrl: 'COOP3000/Ossibus.html'
             }).
             when('/coop4/iccid', {
-                templateUrl: 'COOP4000/iccid-creator.html'
+                templateUrl: 'COOP4000/iccid-creator.html',
+                controller: "iccid-creator"
             }).
             when('/', {
                 templateUrl: 'home.html'
