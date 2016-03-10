@@ -37,7 +37,7 @@ function pad(num, size) {
   return s;
 }
 function createICCID() {
-  var chars = "891111" + "00" + pad(Math.round(Math.random() * max),10);
+  var chars = "891111" + "00" + pad(Math.round(Math.random() * 9999999999),10);
   console.log(apply(chars))
   return apply(chars);
 }
