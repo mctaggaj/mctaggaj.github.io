@@ -38,7 +38,7 @@ angular.module("app").
     return s;
   }
   function createICCID() {
-    var chars = "891111" + $scope.inputChars + pad(Math.round(Math.random() * 9999999999),10);
+    var chars = "891111" + $scope.inputChars||"" + pad(Math.round(Math.random() * 9999999999),10);
     chars = chars.substring(0,18);
     chars = apply(chars)
     $scope.output = chars;
