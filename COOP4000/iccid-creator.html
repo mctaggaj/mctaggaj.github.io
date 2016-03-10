@@ -1,5 +1,4 @@
 <!--Todo: convert this hack into angular-->
-<h1>ICCID Creator<h1>
 <script>
 // https://github.com/smh/checkdigit/blob/master/lib/mod10.js
 function isValid(input) {
@@ -42,5 +41,6 @@ function createICCID() {
   return apply(chars);
 }
 </script>
+<h1>ICCID Creator</h1>
 <input type=number ng-model="chars"/>
 <button ng-click="createICCID()">Create</button>
