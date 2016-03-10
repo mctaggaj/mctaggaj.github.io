@@ -1,0 +1,46 @@
+<!--Todo: convert this hack into angular-->
+<h1>ICCID Creator<h1>
+<script>
+// https://github.com/smh/checkdigit/blob/master/lib/mod10.js
+function isValid(input) {
+  var checkDigitIndex = input.length - 1;
+  return input.substr(checkDigitIndex) === create(input.substr(0, checkDigitIndex));
+}
+
+function apply(input) {
+  return input + create(input);
+}
+
+function create(input) {
+  var sum = 0;
+  input.split('').reverse().forEach(function (value, index) {
+    var weight = (index + 1) % 2 + 1;
+    sum += digitSum(parseInt(value, 10) * weight);
+  });
+  var sumMod10 = sum % 10;
+  if (sumMod10 === 0) {
+    return '0';
+  } else {
+    return (10 - sumMod10) + '';
+  }
+}
+
+function digitSum(number) {
+  var sum = number > 9 ? 1 : 0;
+  return sum + number % 10;
+}
+</script>
+<script>
+function pad(num, size) {
+  var s = num+"";
+  while (s.length < size) s = "0" + s;
+  return s;
+}
+function createICCID() {
+  var chars = "891111" + "00" + pad(Math.round(Math.random() * max),10);
+  console.log(apply(chars))
+  return apply(chars);
+}
+</script>
+<input type=number ng-model="chars"/>
+<button ng-click="createICCID()">Create</button>
