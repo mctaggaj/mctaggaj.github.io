@@ -1,5 +1,5 @@
 angular.module("app").
-  controller("iccid-creator", ["$scope", function () {
+  controller("iccid-creator", ["$scope", function ($scope) {
   // todo: convert to service
   // https://github.com/smh/checkdigit/blob/master/lib/mod10.js
   function isValid(input) {
