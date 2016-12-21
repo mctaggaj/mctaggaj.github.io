@@ -17,35 +17,39 @@ angular.module("app", ["ngRoute"]).config(['$routeProvider',
       templateUrl: 'COOP3000/Ossibus.html'
     }).
     when('/coop4/iccid', {
-      templateUrl: 'COOP4000/iccid-creator.html',
+      templateUrl: 'COOP5000/iccid-creator.html',
       controller: "iccid-creator"
     }).
-    when('/coop4', {
-      templateUrl: 'COOP4000/intro.html'
+    when('/coop5/iccid', {
+      templateUrl: 'COOP5000/iccid-creator.html',
+      controller: "iccid-creator"
     }).
-    when('/coop4/first-impression', {
-      templateUrl: 'COOP4000/first-impression.html'
+    when('/coop5', {
+      templateUrl: 'COOP5000/intro.html'
     }).
-    when('/coop4/organizational-structure', {
-      templateUrl: 'COOP4000/organizational-structure.html'
+    when('/coop5/first-impression', {
+      templateUrl: 'COOP5000/first-impression.html'
     }).
-    when('/coop4/header-bidding-the-what', {
-      templateUrl: 'COOP4000/hb-what.html'
+    when('/coop5/organizational-structure', {
+      templateUrl: 'COOP5000/organizational-structure.html'
     }).
-    when('/coop4/header-bidding-the-alternative', {
-      templateUrl: 'COOP4000/waterfall.html'
+    when('/coop5/header-bidding-the-what', {
+      templateUrl: 'COOP5000/hb-what.html'
     }).
-    when('/coop4/header-bidding-optimization', {
-      templateUrl: 'COOP4000/hb-optimization.html'
+    when('/coop5/header-bidding-the-alternative', {
+      templateUrl: 'COOP5000/waterfall.html'
     }).
-    when('/coop4/ab-testing', {
-      templateUrl: 'COOP4000/ab-testing.html'
+    when('/coop5/header-bidding-optimization', {
+      templateUrl: 'COOP5000/hb-optimization.html'
     }).
-    when('/coop4/pull-requests', {
-      templateUrl: 'COOP4000/pull-requests.html'
+    when('/coop5/ab-testing', {
+      templateUrl: 'COOP5000/ab-testing.html'
     }).
-    when('/coop4/wrapup', {
-      templateUrl: 'COOP4000/wrapup.html'
+    when('/coop5/pull-requests', {
+      templateUrl: 'COOP5000/pull-requests.html'
+    }).
+    when('/coop5/wrapup', {
+      templateUrl: 'COOP5000/wrapup.html'
     }).
     when('/', {
       templateUrl: 'home.html'
